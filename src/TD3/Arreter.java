@@ -20,7 +20,7 @@ public class Arreter implements Behavior {
 	}
 
 	@Override
-	public boolean takeControl() {
+	public boolean takeControl(){
 		return Button.LEFT.isDown();
 	}
 
@@ -38,6 +38,6 @@ public class Arreter implements Behavior {
 	}
 
 	@Override
-	public void suppress() {}
+	public void suppress() {} //okok
 
 }
