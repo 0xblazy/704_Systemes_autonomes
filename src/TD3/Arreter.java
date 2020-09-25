@@ -11,6 +11,7 @@ public class Arreter implements Behavior {
 	private EV3TouchSensor touch;
 	private Arbitrator arby;
 	
+	// Constructeur
 	public Arreter(EV3TouchSensor _touch) {
 		this.touch = _touch;
 	}
