@@ -14,7 +14,7 @@ public class BumperCar {
 		Behavior driveForward = new DriveForward(); // Avancer
 		Behavior hitWall = new HitWall(touchSensor, sample); // Contourner
 		Behavior arreter = new Arreter(touchSensor); // Arreter
-		Behavior batterie = new CompBatt();
+		Behavior batterie = new CompBatt(20, touchSensor); // Batterie
 		
 		Behavior[] behaviors = {
 				driveForward,
@@ -25,6 +25,7 @@ public class BumperCar {
 		
 		Arbitrator arby = new Arbitrator(behaviors);
 		((Arreter) arreter).setArby(arby);
+		((CompBatt) batterie).setArby(arby);
 		arby.go();
 	}
 

@@ -5,7 +5,6 @@ import lejos.hardware.motor.Motor;
 import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.robotics.subsumption.Arbitrator;
 import lejos.robotics.subsumption.Behavior;
-import java.lang.Object;
 
 public class CompBatt implements Behavior {
 	
@@ -22,6 +21,7 @@ public class CompBatt implements Behavior {
 	public void setArby(Arbitrator _arby) {
 		this.arby = _arby;
 	}
+	
 	@Override
 	public boolean takeControl() {
 		if (Battery.getBatteryCurrent() <= this.nb) {
@@ -46,14 +46,8 @@ public class CompBatt implements Behavior {
 	}
 
 	@Override
-	public void suppress() {
-		
-		
-	}
-
+	public void suppress() {}
 	
-	
-	
-	}
+}
 	
 	
