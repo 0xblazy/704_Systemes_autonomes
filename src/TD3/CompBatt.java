@@ -18,6 +18,10 @@ public class CompBatt implements Behavior {
 		this.touch = _touch;
 	
 	}
+	
+	public void setArby(Arbitrator _arby) {
+		this.arby = _arby;
+	}
 	@Override
 	public boolean takeControl() {
 		if (Battery.getBatteryCurrent() <= this.nb) {
